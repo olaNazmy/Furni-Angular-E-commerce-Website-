@@ -1,27 +1,43 @@
-# AngularP
+# Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Welcome to the Angular project! This project serves as the frontend for our application.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This Angular project is designed to provide a user-friendly interface for interacting with our application's functionalities. It's built using Angular framework, offering a robust and dynamic user experience.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get started with this project, follow these steps:
 
-## Build
+1. Clone this repository to your local machine:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```
+    git clone https://github.com/olaNazmy/Angular-Project.git
+    ```
 
-## Running unit tests
+2. Install the necessary dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```
+    npm install
+    ```
 
-## Running end-to-end tests
+3. Run the development server:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```
+    ng serve
+    ```
 
-## Further help
+4. Open your browser and navigate to `http://localhost:4200/` to see the application running.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## API Link
+
+The backend API for this project is hosted in a separate repository. You can find the API repository here: [WepApi-Furni-Project-Angular](https://github.com/olaNazmy/WepApi-Furni-Project-Angular-).
+
+## Contributing
+
+We welcome contributions from the community! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
