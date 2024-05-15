@@ -1,0 +1,73 @@
+<div class="container mt-5">
+    <h1 class="my-3 section-title">{{ productId == 0 ? "Add Product" : "Edit Product"}}</h1>
+    <form [formGroup]="ProductForm"  class="custom-form" (ngSubmit)="ProductHandler()" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input formControlName="productName" name="productName" type="text" class="form-control" id="productName">
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productName')?.hasError('required') && ProductForm.get('productName')?.touched">
+                Product name is required.
+            </div>
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productName')?.hasError('minlength') && ProductForm.get('productName')?.touched">
+                Product name must be at least 3 characters long.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="productPrice">Price:</label>
+            <input formControlName="productPrice" name="productPrice" type="number" class="form-control"
+                id="productPrice" min="0" step="0.01">
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productPrice')?.hasError('required') && ProductForm.get('productPrice')?.touched">
+                Price is required.
+            </div>
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productPrice')?.hasError('min') && ProductForm.get('productPrice')?.touched">
+                Price must be greater than or equal to 0.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="productQuantity">Quantity:</label>
+            <input formControlName="Quantity" name="productQuantity" type="number" class="form-control"
+                id="productQuantity" min="0" required>
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productQuantity')?.hasError('required') && ProductForm.get('productQuantity')?.touched">
+                Quantity is required.
+            </div>
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productQuantity')?.hasError('min') && ProductForm.get('productQuantity')?.touched">
+                Quantity must be greater than or equal to 0.
+            </div>
+        </div>
+        <!--image uplpoad-->
+        
+        <div class="form-group">
+            <label for="productImage">Image:</label>
+            <input   
+            (change)="onFileSelected($event)"
+              type="file" class="form-control-file" id="productImage"
+              accept="image/*" >
+            <small id="imageHelp" class="form-text text-muted">Please upload an image file (jpg, jpeg, png, gif).</small>
+            <div class="text-danger"
+              *ngIf="ProductForm.get('productImage')?.hasError('required') && ProductForm.get('productImage')?.touched">
+              Image is required.
+            </div>
+          </div>        
+
+        <!--image uplpoad-->
+
+        <div class="form-group">
+            <label for="productDescription" class="my-2">Description:</label>
+            <input formControlName="description" name="productDescription" type="text" class="form-control"
+                id="productDescription" required>
+            <div class="text-danger"
+                *ngIf="ProductForm.get('productDescription')?.hasError('required') && ProductForm.get('productDescription')?.touched">
+                Description is required.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3 btn-center" >{{ productId == 0 ? "Add":"Edit"}}</button>
+    </form>
+</div>

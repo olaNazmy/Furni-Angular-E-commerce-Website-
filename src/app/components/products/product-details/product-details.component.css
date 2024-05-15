@@ -1,0 +1,116 @@
+.product-section {
+    padding: 5rem 0;
+}
+
+.product-section .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #3b5d50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-section .product-item .product-thumbnail 
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+
+.product-card .card-body 
+{
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-quantity {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn-primary 
+{
+    background-color: #3b5d50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #e0e0e0;
+    color: #3b5d50;
+}
+
+.stock-msg {
+    margin-bottom: 0; 
+}
+
+.action-icons {
+    margin-top: 1rem; 
+    text-align: center;
+}
+
+.action-icons i {
+    margin-right: 1rem;
+    font-size: 18px;
+}
+.product-description 
+{
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.text-large {
+    font-size: 24px;
+    font-weight: bold;
+}
+.product-image 
+{
+    max-width: 200px;
+    margin: 20px auto 0; /* Adjusted margin */
+    display: block;
+}
+
+.product-price {
+    font-size: 20px; 
+    color: #333; 
+    font-weight: bold; 
+}
+.styled-description {
+    font-size: 19px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center; 
+}

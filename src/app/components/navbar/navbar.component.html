@@ -1,0 +1,55 @@
+<nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+  <div class="container">
+    <a class="navbar-brand" href="#">Furni<span>.</span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+      aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsFurni">
+      <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <!--activate link, make css class to activation-->
+          <a class="nav-link" href="#" [routerLink]="['/']" [routerLinkActive]="'router-link-active'"
+            [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li><a class="nav-link" href="#" [routerLink]="['/products']" [routerLinkActive]="'router-link-active'"
+            [routerLinkActiveOptions]="{exact:true}">Shop Products</a>
+        </li>
+        <!--if he is admin will view it-->
+        <li>
+          <a class="nav-link" [hidden]="!isAdmin" [routerLink]="['/products',0,'edit']"
+            [routerLinkActive]="'router-link-active'" [routerLinkActiveOptions]="{exact:true}" href="#">Add Product
+          </a>
+        </li>
+
+
+        <li *ngIf="!isLoggedIn">
+          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active"
+            [routerLinkActiveOptions]="{exact: true}">
+            Login
+          </a>
+        </li>
+        <!--Replace the login by logout-->
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="logout()">
+            Logout<i class="bi bi-box-arrow-right mx-2"></i>
+          </a>
+        </li>
+
+
+        <li>
+          <a class="nav-link"
+          [routerLink]="['/contactus']"
+          routerLinkActive="router-link-active"
+          [routerLinkActiveOptions]="{exact: true}"
+          href="#">Contact Us</a></li>
+      </ul>
+
+      <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+        <li><a class="nav-link text-white" href="#"><i class="bi bi-cart-plus-fill"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

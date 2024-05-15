@@ -1,0 +1,31 @@
+<!-- Start Product Section -->
+<div class="product-section">
+	<h2 class="section-title">Our Products</h2>
+	<div class="container">
+		<div class="row">
+			<!-- Start Column 2 -->
+			<div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0"  *ngFor="let product of products" >
+				<a class="product-item" href="#">
+					<img [src]="product.imageUrl" class="img-fluid product-thumbnail">
+					<h3 class="product-title">{{product.productName}}</h3>
+					<strong class="product-price">{{product.productPrice | currency}}</strong>
+					<!--Actions for admin, will check rule for admin or user-->
+					<div class="viewing-icon">
+						<!--view details-->
+						<a [routerLink]="['/products', product.id]" class="bi bi-eye text-warning" aria-label="View product details"></a>
+						<!--(click)="deleteProduct(product.id)"-->
+						<i *ngIf="isAdmin" class="bi bi-trash text-danger" (click)="deleteProduct(product.id)"></i>
+						<!--[routerLink]="['/products',product.id,'edit']"-->
+						<a *ngIf="isAdmin" [routerLink]="['/products', product.id, 'edit']" class="bi bi-pencil-square text-success"></a>
+					</div>
+					<span class="icon-cross">
+						<img src="../../../assets/imgs/cross.svg" class="img-fluid">
+					</span>
+				</a>
+
+			</div>
+			<!-- End Column 2 -->
+		</div>
+	</div>
+</div>
+<!-- End Product Section -->
